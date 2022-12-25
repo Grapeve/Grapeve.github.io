@@ -1,0 +1,20 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "description": "personal blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vitepress dev docs",
+    "build": "vitepress build docs"
+  },
+  "author": "Rhys",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.33",
+    "vue": "^3.2.45"
+  },
+  "dependencies": {
+    "element-plus": "^2.2.27"
+  }
+}
