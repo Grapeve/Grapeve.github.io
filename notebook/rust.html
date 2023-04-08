@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>水青云波</title>
     <meta name="description" content="在纷扰的尘世中记录一点宁静">
-    <link rel="stylesheet" href="/assets/style.7e125b45.css">
-    <link rel="modulepreload" href="/assets/app.a4deba98.js">
-    <link rel="modulepreload" href="/assets/notebook_rust.md.3a600f6c.lean.js">
+    <link rel="stylesheet" href="/assets/style.6538403c.css">
+    <link rel="modulepreload" href="/assets/app.5a8be405.js">
+    <link rel="modulepreload" href="/assets/notebook_rust.md.63f4b48a.lean.js">
     
     <script id="check-dark-light">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
   </head>
@@ -29,8 +29,8 @@
 <span class="line"></span>
 <span class="line"><span style="color:#C792EA;">let</span><span style="color:#A6ACCD;"> p </span><span style="color:#89DDFF;">=</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&quot;</span><span style="color:#C3E88D;">(1,2)</span><span style="color:#89DDFF;">&quot;</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">parse</span><span style="color:#89DDFF;">::&lt;</span><span style="color:#FFCB6B;">Point</span><span style="color:#89DDFF;">&gt;();</span></span>
 <span class="line"></span></code></pre></div><h3 id="_7-闭包与函数" tabindex="-1">7. 闭包与函数 <a class="header-anchor" href="#_7-闭包与函数" aria-hidden="true">#</a></h3><p><strong>1.常规函数</strong></p><p><strong>2.函数指针</strong></p><p><strong>3.闭包</strong></p><p>唯一不可变引用：编译器不允许你去使用被闭包捕获的引用。</p><p><span style="color:blue;"><strong>闭包实现Copy / Clone 的两条简单规则:</strong></span></p><p>1.若环境变量实现了Copy，闭包如果以<strong>可变借用方式</strong>捕获环境变量并对其进行修改，则闭包</p><p>自身不会实现Copy。</p><p>2.若环境变量自身是Move 语义，如果闭包内<strong>捕获环境变量的操作涉及修改环境变量或者消耗环境变量</strong>，则闭包自身不会实现Copy。</p><p><span style="color:blue;"><strong>闭包实现Sync / Send的三条简单规则：</strong></span></p><p>1.如果所有捕获变量均实现了Sync，则闭包女现Sync。</p><p>2.如果环境变量<strong>都不是唯一不可变引用方式捕获</strong>的，<strong>并且都实现了Sync</strong>，则闭包实现Send。</p><p>3.如果环境变量<strong>是以唯一不可变引用</strong>、<strong>可变引用</strong>、<strong>Copy或Move所有权捕获</strong>的，那闭包实现Send。</p><h3 id="_8-模式匹配" tabindex="-1">8. 模式匹配 <a class="header-anchor" href="#_8-模式匹配" aria-hidden="true">#</a></h3><p>两大类：不可辨驳模式与可辩驳模式</p><p>当一个引用值与非引用模式匹配时，编译器会自动填充ref或者ref mut来匹配引用或者是可变引用。</p><h2 id="二-rust核心概念" tabindex="-1">二. Rust核心概念 <a class="header-anchor" href="#二-rust核心概念" aria-hidden="true">#</a></h2><h2 id="三-rust异步编程" tabindex="-1">三. Rust异步编程 <a class="header-anchor" href="#三-rust异步编程" aria-hidden="true">#</a></h2></div></div></main><!--[--><!--]--><!----><!--[--><!--]--></div></div></div></div></div><!----><!--[--><!--]--></div></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"views_toolbox.md\":\"d2a1d01b\",\"notebook_rust.md\":\"3a600f6c\",\"notebook_算法.md\":\"1af321db\",\"index.md\":\"942c0852\"}")</script>
-    <script type="module" async src="/assets/app.a4deba98.js"></script>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"index.md\":\"c2c9fe16\",\"views_toolbox.md\":\"d50947ba\",\"notebook_rust.md\":\"63f4b48a\",\"notebook_算法.md\":\"10af4f6f\"}")</script>
+    <script type="module" async src="/assets/app.5a8be405.js"></script>
     
   </body>
 </html>
